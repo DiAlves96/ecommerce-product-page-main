@@ -673,7 +673,7 @@
 }
 
 .empty-cart-message {
-  display: none; /* Começa oculta */
+  display: flex; 
   text-align: center;
   color: #555;
   font-style: italic;
@@ -732,7 +732,6 @@ footer {
     background-color: hsl(0, 0%, 100%);
     padding: 15px 20px;
     margin-bottom: 60px;
-    /* ✅ adiciona espaço entre o menu e o conteúdo */
   }
 
 
