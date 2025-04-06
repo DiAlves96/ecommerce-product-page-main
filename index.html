@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="/manifest.json">
+</head>
+
+<body>
+
+  <!-- ===== MENU / NAVEGAÇÃO PRINCIPAL ===== -->
+  <nav class="menu" aria-label="Menu principal">
+    <div class="menu-link">
+
+      <a href="#" class="logo">
+        <img src="images/logo.svg" alt="Logo da empresa">
+      </a>
+
+      <ul class="links">
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div class="menu-icons">
+        <a href="#" class="cart">
+          <img src="images/icon-cart.svg" alt="Ícone do carrinho">
+          <span class="cart-count">0</span>
+        </a>
+        <div class="cart-overlay">
+          <div class="cart">
+            <div class="cart-header">
+              <h3>Cart</h3>
+      
+            </div>
+            <div class="cart-items">
+              <p class="empty-cart-message">Carrinho vazio</p>
+            </div>
+      
+            <div class="cart-footer">
+              <div class="total">
+                <p>Total: <span class="total-price">$0.00</span></p>
+              </div>
+              <button class="checkout-btn">Checkout</button>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="avatar">
+          <img src="images/image-avatar.png" alt="Avatar do usuário">
+        </a>
+      </div>
+
+    </div>
+  </nav>
+  <div class="btn-open-menu" id="bnt-menu">
+    <img src="images/icon-menu.svg" alt="menu">
+  </div>
+
+  <!--==== MENU MOBILE ====-->
+  <div class="menu-mobile" id="menu-mobile">
+    <div class="btn-close">
+      <img src="images/icon-close.svg" alt="x">
+    </div>
+    <ul>
+      <li><a href="#">Collections</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+  </div>
+
+  <div class="overlay-menu" id="overlay-menu"></div>
+
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main class="container">
+
+    <!-- === GALERIA DE PRODUTOS === -->
+    <section class="product-gallery">
+      <div class="product-images">
+        <div class="product-item">
+          <img src="images/image-product-1.jpg" alt="Produto 1: Descrição do produto 1">
+        </div>
+        <div class="product-item">
+          <img src="images/image-product-2.jpg" alt="Produto 2: Descrição do produto 2">
+        </div>
+        <div class="product-item">
+          <img src="images/image-product-3.jpg" alt="Produto 3: Descrição do produto 3">
+        </div>
+        <div class="product-item">
+          <img src="images/image-product-4.jpg" alt="Produto 4: Descrição do produto 4">
+        </div>
+      </div>
+      <div class="product-thumbnails">
+        <div class="thumb-item">
+          <img src="images/image-product-1-thumbnail.jpg" alt="Miniatura do produto 1">
+        </div>
+        <div class="thumb-item">
+          <img src="images/image-product-2-thumbnail.jpg" alt="Miniatura do produto 2">
+        </div>
+        <div class="thumb-item">
+          <img src="images/image-product-3-thumbnail.jpg" alt="Miniatura do produto 3">
+        </div>
+        <div class="thumb-item">
+          <img src="images/image-product-4-thumbnail.jpg" alt="Miniatura do produto 4">
+        </div>
+      </div>
+    </section>
+
+    <!-- === INFORMAÇÕES DO PRODUTO === -->
+    <section class="product-info">
+      <h1 class="brand">sneaker company</h1>
+      <h2 class="product-name">Fall Limited Edition Sneakers</h2>
+      <p class="product-description">
+        These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
+        they’ll withstand everything the weather can offer.
+      </p>
+
+      <div class="product-price">
+        <span class="current-price">$125.00</span>
+        <span class="discount-percentage">50%</span>
+
+      </div>
+      <div class="price-pro">
+        <span class="discount-price">$250.00</span>
+      </div>
+      <div class="product-actions">
+        <div class="quantity-box">
+          <button class="quantity-btn" id="decrease">
+            <img src="images/icon-minus.svg" alt="-">
+          </button>
+
+          <input type="number" id="quantity" value="1" min="1" />
+
+          <button class="quantity-btn" id="increase">
+            <img src="images/icon-plus.svg" alt="+">
+          </button>
+        </div>
+
+        <div class="add-to-cart">
+          <img src="images/icon-car.svg" alt="car">
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== LIGHTBOX (AMPLIAÇÃO DE IMAGENS) ===== -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <button class="prev">&#10094;</button>
+    <img id="lightbox-img" src="" alt="Imagem Ampliada">
+
+    <div class="thumbnails">
+      <img class="thumb" src="images/image-product-1-thumbnail.jpg" alt="Miniatura 1">
+      <img class="thumb" src="images/image-product-2-thumbnail.jpg" alt="Miniatura 2">
+      <img class="thumb" src="images/image-product-3-thumbnail.jpg" alt="Miniatura 3">
+      <img class="thumb" src="images/image-product-4-thumbnail.jpg" alt="Miniatura 4">
+    </div>
+    <button class="next">&#10095;</button>
+  </div>
+
+  <!--===== Botões de navegação mobile =====-->
+  <button class="prev-mobile" id="prev-mobile">‹</button>
+  <button class="next-mobile" id="next-mobile">›</button>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Dilmário Alves</a>.
+    </div>
+  </footer>
+</body>
+<!--===== Script JavaScript =====-->
+<script src="script.js" defer></script>
+
+</html>
